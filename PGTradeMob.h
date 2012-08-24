@@ -9,15 +9,15 @@
 #import "TMUniversalTracking.h"
 
 #ifdef PHONEGAP_FRAMEWORK
-  #import <PhoneGap/PGPlugin.h>
+    #import <PhoneGap/PGPlugin.h>
 #else
-  #import "PGPlugin.h"
+    #import "PGPlugin.h"
 #endif
 
 @interface PGTradeMob : PGPlugin
 
 /*
- can be used to inform the Trademob Server about specific actions (non consumable / tracked once) of the user,
+ scan be used to inform the Trademob Server about specific actions (non consumable / tracked once) of the user,
  for example if the user has finished the third level of a game, has registered a premium account or used another
  specific function.
 */

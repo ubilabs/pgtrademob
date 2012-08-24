@@ -13,37 +13,37 @@
 
 - (void)trackActionOnce:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
   
-  NSString *action = [options objectForKey:@"action"];
-  NSNumber *value  = [options objectForKey:@"value"];
-  NSString *subid  = [options objectForKey:@"subid"];
+    NSString *action = [options objectForKey:@"action"];
+    NSNumber *value  = [options objectForKey:@"value"];
+    NSString *subid  = [options objectForKey:@"subid"];
   
-  [TMUniversalTracking trackActionOnce: action
-                              forValue: value
-                              andSubId: subid];
+    [TMUniversalTracking trackActionOnce: action
+                                forValue: value
+                                andSubId: subid];
 }
 
 
 - (void)trackActionAlways:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
   
-  NSString *action = [options objectForKey:@"action"];
-  NSNumber *value  = [options objectForKey:@"value"];
-  NSString *subid  = [options objectForKey:@"subid"];
+    NSString *action = [options objectForKey:@"action"];
+    NSNumber *value  = [options objectForKey:@"value"];
+    NSString *subid  = [options objectForKey:@"subid"];
   
-  [TMUniversalTracking trackActionAlways: action
-                                forValue: value
-                                andSubId: subid];
+    [TMUniversalTracking trackActionAlways: action
+                                  forValue: value
+                                  andSubId: subid];
 }
 
 - (void)trackAppload:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
-  [TMUniversalTracking trackAppload];
+    [TMUniversalTracking trackAppload];
 }
 
 - (void)debugMode:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
-  [TMUniversalTracking debugMode];
+    [TMUniversalTracking debugMode];
 }
 
 - (void)disableGPS:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
-  [TMUniversalTracking disableGPS];
+    [TMUniversalTracking disableGPS];
 }
 
 @end
