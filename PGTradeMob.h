@@ -1,20 +1,17 @@
 //
 //  PGTradeMob.h
-//  
+//
 //
 //  Created by Frank Müller on 24.08.12.
 //  Copyright 2012 Ubilabs GmbH All rights reserved.
 //
 
 #import "TMUniversalTracking.h"
+#import <Foundation/Foundation.h>
+#import <Cordova/CDVPlugin.h>
 
-#ifdef PHONEGAP_FRAMEWORK
-    #import <PhoneGap/PGPlugin.h>
-#else
-    #import "PGPlugin.h"
-#endif
+@interface PGTradeMob : CDVPlugin
 
-@interface PGTradeMob : PGPlugin
 
 /*
  scan be used to inform the Trademob Server about specific actions (non consumable / tracked once) of the user,
@@ -32,7 +29,7 @@
 
 
 /*
- notify the Trademob Server when the app is started for the first time and then send data concerning app usage 
+ notify the Trademob Server when the app is started for the first time and then send data concerning app usage
  frequency in regular intervals. If this method is run manually for the first time it registers itself to the
  "UIApplicationWillEnterForegroundNotification" and will report appstart events each time this event is fired by the app.
 */
@@ -40,7 +37,7 @@
 
 
 /*
- This mode is global and should be called once, before any other SDK action is done. If you are currently integrating 
+ This mode is global and should be called once, before any other SDK action is done. If you are currently integrating
  the SDK turn on the debug mode to see if the SDK works properly and reaches the Trademob System.
  The debug mode cannot be turned off by command. If you no longer want debug logs remove the command from your app.
 */
@@ -48,7 +45,7 @@
 
 
 /*
- if your app utilized the GPS location service, the trademob SDK will read current GPS data from the device and use 
+ if your app utilized the GPS location service, the trademob SDK will read current GPS data from the device and use
  it for tracking. If you want to prohibit the SDK to use GPS data call this method.
  This method should be called once before any SDK tracking method is called.
 */

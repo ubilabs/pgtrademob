@@ -1,15 +1,15 @@
 var TradeMob = function(){};
 
 TradeMob.prototype.trackAppload = function() {
-  PhoneGap.exec("PGTradeMob.trackAppload");
+  cordova.exec("PGTradeMob.trackAppload");
 };
 
 TradeMob.prototype.debugMode = function() {
-  PhoneGap.exec("PGTradeMob.debugMode");
+  cordova.exec("PGTradeMob.debugMode");
 };
 
 TradeMob.prototype.disableGPS = function() {
-  PhoneGap.exec("PGTradeMob.disableGPS");
+  cordova.exec("PGTradeMob.disableGPS");
 };
 
 TradeMob.prototype.trackActionOnce = function(action, value, subid) {
@@ -19,7 +19,7 @@ TradeMob.prototype.trackActionOnce = function(action, value, subid) {
     subid: subid
   };
 
-  PhoneGap.exec("PGTradeMob.trackActionOnce", options);
+  cordova.exec("PGTradeMob.trackActionOnce", options);
 };
 
 TradeMob.prototype.trackActionAlways = function(action, value, subid) {
@@ -29,10 +29,10 @@ TradeMob.prototype.trackActionAlways = function(action, value, subid) {
     subid: subid
   };
 
-  PhoneGap.exec("PGTradeMob.trackActionAlways", options);
+  cordova.exec("PGTradeMob.trackActionAlways", options);
 };
 
-PhoneGap.addConstructor(function() {
+cordova.addConstructor(function() {
   if(!window.plugins) window.plugins = {};
   window.plugins.tradeMob = new TradeMob();
 });
